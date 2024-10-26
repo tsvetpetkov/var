@@ -1,1 +1,1 @@
-Example code on how to estimate a vector autoregression and plot impulse-response functions identified with a Cholesky decomposition of the errors.
+Example code showing how to estimate a simple vector autoregression for macroeconomic analysis and plot impulse-response functions identified with a Cholesky decomposition of the errors from scratch and manually without the need to use paid Matlab libraries.
