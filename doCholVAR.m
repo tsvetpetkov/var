@@ -9,13 +9,13 @@ clc;
 
 % specify file name
 Data.FileName = "sample_us_macro_data";
-% import .csv file stored in the data folder and trim its labels
-Data.Set = csvread(('../data/' + Data.FileName + '.csv'), 1, 0);
+% import .csv file and trim its labels
+Data.Set = csvread(Data.FileName + '.csv', 1, 0);
 
 % specify the label of each data col
-Data.Labels = {'Y', 'M', 'IP', 'UR', 'CRB', 'CPI', 'EBP', 'GS2'};
+Data.Labels = {'Y', 'M', 'GDP', 'IP', 'CPI', 'PCE', 'CRB', 'PPI', 'EBP', 'WXR', 'GS1', 'GS2', 'UR', 'EPR'};
 % specify the value order of each data col
-Data.Values = [1, 2, 3, 4, 5, 6, 7, 8];
+Data.Values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 % map labels and values
 Data.Map = containers.Map(Data.Labels, Data.Values);
@@ -28,7 +28,7 @@ VAR.tsFreq = 12;
 VAR.monpolVar = {'GS1'};
 VAR.monpolVarLbl = {'1-Year Rate (% pts)'};
 
-VAR.macroVars = {'IP','CPI','CRB','EBP'};
+VAR.macroVars = {'IP', 'CPI', 'CRB', 'EBP'};
 VAR.macroVarsLbls = {'Industrial Production (%)','Consumer Prices (%)','Commodity Prices (%)','Excess Bond Premium (% pts)'};
 
 VAR.laborVars = {'UR'};
