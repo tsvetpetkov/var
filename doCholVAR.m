@@ -13,9 +13,9 @@ Data.FileName = "sample_us_macro_data";
 Data.Set = csvread(('../data/' + Data.FileName + '.csv'), 1, 0);
 
 % specify the label of each data col
-%Data.Labels = {'Y', 'M', 'IP', 'UR', 'CRB', 'CPI', 'EBP', 'GS2'};
+Data.Labels = {'Y', 'M', 'IP', 'UR', 'CRB', 'CPI', 'EBP', 'GS2'};
 % specify the value order of each data col
-%Data.Values = [1, 2, 3, 4, 5, 6, 7, 8];
+Data.Values = [1, 2, 3, 4, 5, 6, 7, 8];
 
 % map labels and values
 Data.Map = containers.Map(Data.Labels, Data.Values);
